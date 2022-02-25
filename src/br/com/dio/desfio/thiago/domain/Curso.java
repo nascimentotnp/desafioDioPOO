@@ -1,11 +1,16 @@
 package br.com.dio.desfio.thiago.domain;
 
-public class Curso {
+public class Curso extends Conteudo{
     private String titulo;
     private String descricao;
     private int cargaHoraria;
 
     public Curso() {
+    }
+
+    @Override
+    public double calcularXP() {
+        return XP*cargaHoraria;
     }
 
     public String getTitulo() {
@@ -40,4 +45,5 @@ public class Curso {
                 ", Carga Horaria de " + cargaHoraria +
                 " horas";
     }
+
 }

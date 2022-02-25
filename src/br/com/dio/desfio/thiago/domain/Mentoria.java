@@ -3,12 +3,16 @@ package br.com.dio.desfio.thiago.domain;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class Mentoria {
+public class Mentoria extends Conteudo{
     private String titulo;
     private String descricao;
-    private LocalDateTime data;
+    private LocalDate data;
 
     public Mentoria() {
+    }
+    @Override
+    public double calcularXP() {
+        return XP + 25;
     }
 
     public String getTitulo() {
@@ -27,19 +31,21 @@ public class Mentoria {
         this.descricao = descricao;
     }
 
-    public LocalDateTime getData() {
+    public LocalDate getData() {
         return data;
     }
 
-    public void setData(LocalDateTime data) {
-        this.data = LocalDateTime.from(data);
+    public void setData(LocalDate data) {
+        this.data = LocalDate.from(data);
     }
 
     @Override
     public String toString() {
         return "Mentoria " +
-                "Titulo " + titulo +
-                ", Descricao " + descricao +
-                ", Data " + data ;
+                "Titulo " + getTitulo() +
+                ", Descricao " + getDescricao() +
+                ", Data " + getData();
     }
+
+
 }

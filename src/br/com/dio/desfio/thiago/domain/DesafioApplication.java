@@ -1,3 +1,5 @@
+package br.com.dio.desfio.thiago.domain;
+
 import br.com.dio.desfio.thiago.domain.Bootcamp;
 import br.com.dio.desfio.thiago.domain.Curso;
 import br.com.dio.desfio.thiago.domain.Dev;
